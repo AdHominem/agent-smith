@@ -1,5 +1,7 @@
 name: bandit-security
 run-name: Run bandit to check the code
+permissions:
+  contents: read
 on:
   push:
     branches: ["main"]
