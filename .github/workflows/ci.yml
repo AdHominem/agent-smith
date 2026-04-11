@@ -1,0 +1,22 @@
+name: bandit-security
+run-name: Run bandit to check the code
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+jobs:
+  bandit-security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Bandit 
+        run: pip install bandit
+      - name: Run Bandit
+        run: bandit -r . -ll
