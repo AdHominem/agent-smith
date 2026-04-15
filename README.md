@@ -1,3 +1,4 @@
+[![CodeQL](https://github.com/AdHominem/agent-smith/actions/workflows/ci.yml/badge.svg)](https://github.com/AdHominem/agent-smith/actions/workflows/ci.yml)
 
 # Welcome to your CDK Python project!
 
