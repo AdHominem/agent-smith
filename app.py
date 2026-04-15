@@ -3,11 +3,16 @@ import os
 
 import aws_cdk as cdk
 
-from agent_smith.agent_smith_stack import AgentSmithStack
+from infra.agent_smith_stack import AgentSmithStack
 
 
 app = cdk.App()
-AgentSmithStack(app, "AgentSmithStack",
+AgentSmithStack(app,
+                "AgentSmithStack",
+                env=cdk.Environment(
+                    account="548931596365",
+                    region="eu-central-1"
+                )
     # If you don't specify 'env', this stack will be environment-agnostic.
     # Account/Region-dependent features and context lookups will not work,
     # but a single synthesized template can be deployed anywhere.
