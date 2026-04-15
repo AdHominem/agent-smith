@@ -1,5 +1,5 @@
-name: bandit-security
-run-name: Run bandit to check the code
+name: security-workflow
+run-name: Run bandit and gitleaks
 permissions:
   contents: read
 on:
@@ -22,3 +22,12 @@ jobs:
         run: pip install bandit
       - name: Run Bandit
         run: bandit -r . -ll
+  gitleaks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
