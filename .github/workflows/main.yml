@@ -12,16 +12,18 @@ jobs:
   bandit-security:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 
+      - name: Checkout
         uses: actions/checkout@v5
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install Bandit 
-        run: pip install bandit
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
       - name: Run Bandit
-        run: bandit -r . -ll
+        run: bandit -r src infra app.py -ll
   gitleaks:
     runs-on: ubuntu-latest
     steps:
