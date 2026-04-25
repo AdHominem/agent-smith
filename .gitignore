@@ -243,3 +243,4 @@ cdk.context.json
 
 # Ignore build folder
 .aws-sam/
+/.claude/settings.local.json

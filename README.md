@@ -51,7 +51,6 @@ them to your `requirements.txt` file and rerun the `python -m pip install -r req
 command.
 
 ## Useful commands
-
  * `cdk ls`          list all stacks in the app
  * `cdk synth`       emits the synthesized CloudFormation template
  * `cdk deploy`      deploy this stack to your default AWS account/region
