@@ -1,8 +1,10 @@
 [![CodeQL](https://github.com/AdHominem/agent-smith/actions/workflows/ci.yml/badge.svg)](https://github.com/AdHominem/agent-smith/actions/workflows/ci.yml)
 
-# Welcome to your CDK Python project!
+# Shielded Agent
 
-This is a blank project for CDK development with Python.
+A simple agent built with AWS Bedrock behind an API.
+
+# Setup
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
